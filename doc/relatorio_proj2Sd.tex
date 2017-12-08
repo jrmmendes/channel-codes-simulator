@@ -12,6 +12,7 @@
 \usepackage{setspace}
 \usepackage{makeidx}
 \usepackage{hyperref}
+\usepackage{enumerate}
 
 %formatação da página
 \geometry{
@@ -41,9 +42,9 @@ Este relatório está organizado da maneira que se segue. Na Seção 2 é aprese
 \section{Base Teórica}
 \subsection{Grupos}
 
-Seja $G$ um conjunto. Uma operação binária em $G$ é uma função que atribui, a cada par de elementos em $G$, um outro elemento em $G$ . A estrutura algébrica  $(G , *)$ , em que $*$ é uma operação binária defina em G , é um grupo se, $\forall g , h , k \in G,$
+Seja $G$ um conjunto. Uma operação binária em $G$ é uma função que atribui, a cada par de elementos em $G$, um outro elemento em $G$ . A estrutura algébrica  $\langle G , * \rangle$ , em que $*$ é uma operação binária defina em G , é um grupo se, $\forall g , h , k \in G,$
 
-\begin{enumerate}
+\begin{enumerate}[G1.]
 	\item $g * h \in G$ (fechamento)
 	\item $ g * (h * k) = (g*h)*k$ (associatividade)
 	\item $ \exists e \in G ; e * g = g * e = g $ (identidade)
@@ -51,11 +52,21 @@ Seja $G$ um conjunto. Uma operação binária em $G$ é uma função que atribui
 \end{enumerate}
 
 Se, além das propriedades acima, for válida a comutatividade ( $ g*h = h*g , \forall g , h \in G$ ), então o grupo é dito abeliano ou comutativo. Também é possível classificar essa estrutura pela sua cardinalidade, podendo existir grupos finitos ou infinitos.
-Se somente o fechamento vale, têm-se um grupoide; se, além deste, a associatividade também é verificada , um semigrupo. Por fim, apenas a existência do inverso não é satisfeita, têm-se um monoide.
+Se somente o fechamento vale, têm-se um grupoide; se, além deste, a associatividade também é verificada , um semigrupo. Por fim, no caso em que apenas a existência do inverso não é satisfeita, têm-se um monoide.
 
+No que diz respeito a grupos, ainda é possível destacar algumas propriedades. Se $h$ e $g$ são elementos de um grupo $G$, 
 
-\subsection{Subgrupos e Teorema de Lagrange}
-\subsection{Espaços Vetoriais}
+\begin{enumerate}[PG1.]
+	\item O elemento identidade é único;
+	\item O elemento inverso de um elemento $g$ é único;
+	\item  O inverso do elemento $k = g*h$ é $k^{-1}=g^{-1}*h-1$ ;
+	\item Todo elemento é cancelável, i.e., se $h _ 1 * g = h _ 2 * g$ e $g*h _ 1 = g*h _ 2$ , então $h _ 1 = h _ 2$ ;
+	\item Para quaisquer elementos $a$ e $b$ do grupo, a equação $a*x =b$ tem uma única
+	solução.
+\end{enumerate}
+
+\subsection{Grupos Finitos e Subgrupos}
+\subsection{Classes Laterais e Teorema de Lagrange}
 \subsection{Códigos de Tratamento de Erros}
 \subsection{Binary Simetric Channel (BSC)}
 
