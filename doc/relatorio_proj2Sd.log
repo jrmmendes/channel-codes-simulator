@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.7)  8 DEC 2017 02:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.7)  8 DEC 2017 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,6 +503,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks18
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
 \@indexfile=\write3
 \openout3 = `relatorio_proj2Sd.idx'.
 
@@ -511,20 +519,20 @@ Writing index file relatorio_proj2Sd.idx
 (./relatorio_proj2Sd.aux)
 \openout1 = `relatorio_proj2Sd.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -561,7 +569,7 @@ LaTeX Font Info:    ... okay on input line 28.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box26
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -570,98 +578,97 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count101
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 
 (./relatorio_proj2Sd.out) (./relatorio_proj2Sd.out)
 \@outlinefile=\write4
 \openout4 = `relatorio_proj2Sd.out'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 45.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 75.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 73.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 78.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 82.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 75.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 83.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 87.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 89.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 94.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 100.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 102.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./relatorio_proj2Sd.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
-
-
-Package rerunfilecheck Warning: File `relatorio_proj2Sd.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `relatorio_proj2Sd.out':
-(rerunfilecheck)             Before: 88E35B236E790660DFDEFAF6331D908F;798
-(rerunfilecheck)             After:  755DFCE1670A2347A910D189FF8E752A;811.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package rerunfilecheck Info: File `relatorio_proj2Sd.out' has not changed.
+(rerunfilecheck)             Checksum: 13B913A023F3DCFF2437588D320010FF;857.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 494929
- 79587 string characters out of 6180142
- 172613 words of memory out of 5000000
- 8733 multiletter control sequences out of 15000+600000
- 7587 words of font info for 27 fonts, out of 8000000 for 9000
+ 5590 strings out of 494929
+ 80947 string characters out of 6180142
+ 172070 words of memory out of 5000000
+ 8812 multiletter control sequences out of 15000+600000
+ 11849 words of font info for 46 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 29i,7n,32p,451b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb>
-Output written on relatorio_proj2Sd.pdf (2 pages, 93273 bytes).
+ 29i,7n,32p,695b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on relatorio_proj2Sd.pdf (2 pages, 128836 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

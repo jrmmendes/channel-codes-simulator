@@ -13,6 +13,7 @@
 \usepackage{makeidx}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{amsfonts}
 
 %formatação da página
 \geometry{
@@ -33,15 +34,15 @@
 
 \par
 Os códigos de tratamento de erros são de grande importância nos sistemas de comunicação modernos. Com efeito, a utilização dos mesmos pode ser a diferença entre aqueles que são ou não funcionais, uma vez que é possível detectar e, possivelmente, corrigir erros em mensagens sem a necessidade de retransmissão dos dados. 
-...
+... %necessário complementar
 
+\par
 Este relatório está organizado da maneira que se segue. Na Seção 2 é apresentada toda a base teórica referente a álgebra abstrata e teoria de códigos utilizada no projeto, bem como uma pequena revisão acerca dos canais BSC. A Seção 3 apresenta a metodologia utilizada nas simulações, sendo estas mostradas na Seção 4. Na Seção 5 os resultados são analizados, e o relatório é concluido na Seção 6.
-
-
 
 \section{Base Teórica}
 \subsection{Grupos}
 
+\par
 Seja $G$ um conjunto. Uma operação binária em $G$ é uma função que atribui, a cada par de elementos em $G$, um outro elemento em $G$ . A estrutura algébrica  $\langle G , * \rangle$ , em que $*$ é uma operação binária defina em G , é um grupo se, $\forall g , h , k \in G,$
 
 \begin{enumerate}[G1.]
@@ -51,9 +52,11 @@ Seja $G$ um conjunto. Uma operação binária em $G$ é uma função que atribui
 	\item $ \exists g^{-1} \in G;  g*g^{-1} = g^{-1} *g=e $ (inverso)
 \end{enumerate}
 
+\par
 Se, além das propriedades acima, for válida a comutatividade ( $ g*h = h*g , \forall g , h \in G$ ), então o grupo é dito abeliano ou comutativo. Também é possível classificar essa estrutura pela sua cardinalidade, podendo existir grupos finitos ou infinitos.
 Se somente o fechamento vale, têm-se um grupoide; se, além deste, a associatividade também é verificada , um semigrupo. Por fim, no caso em que apenas a existência do inverso não é satisfeita, têm-se um monoide.
 
+\par
 No que diz respeito a grupos, ainda é possível destacar algumas propriedades. Se $h$ e $g$ são elementos de um grupo $G$, 
 
 \begin{enumerate}[PG1.]
@@ -65,8 +68,24 @@ No que diz respeito a grupos, ainda é possível destacar algumas propriedades. 
 	solução.
 \end{enumerate}
 
-\subsection{Grupos Finitos e Subgrupos}
+\par
+O número de elementos de um grupo, seja ele finito ou infinito, é chamado de ordem do grupo. A ordem do grupo $G$ é denotada usando o símbolo de valor absoluto, i.e., por $\left| G \right|$.Por exemplo, o grupo dos inteiros $\mathbb{Z}$ sobre a adição tem uma ordem infinita (número infinito de elementos), enquanto o grupo $U(10) = \lbrace 1,3,7,9 \rbrace$ sobre a multiplicação módulo 10 tem  ordem 4.
+
+Já no que se refere aos elementos, a ordem de $g$, se $e$ é o elemento identidade, é o menor inteiro positivo $n$ para o qual $g^n = e$, ou, em notação aditiva, $ng = e$. Se tal número não existe, e dito que a órdem $\left|g\right|$ é infinita. 
+
+\subsection{Subgrupos}
+
+\par
+Se um subconjunto $H$ de um grupo $G$ é ele próprio um grupo sobre a operação definida em $G$, então é dito ser subgrupo deste. Essa relação é denotada por $H \leq G $ (lê-se “$H$ é subgrupo de $G$). Todo grupo é subgrupo dele mesmo. Se $H$ é subgrupo de $G$, mas não é igual a $G$, então ele é chamado de \textbf{subgrupo próprio} (\textit{proper subgroup}) e pode ser usada a notação $H < G$. Além disso, o subgrupo trivial $\lbrace e \rbrace$ é subgrupo de qualquer grupo. Os demais que eventualmente existam são ditos subgrupos não-triviais de $G$. No Apêndice A são mostrados alguns métodos de testes para subgrupos.
+
 \subsection{Classes Laterais e Teorema de Lagrange}
+
+\par
+O Teorema de Lagrange é sem dúvidas um dos mais importantes resultados dentro da teoria dos grupos finitos, considerado, sobretudo, o “ABC da Álgebra Abstrata”. Para provar sua validade, é necessário estudar antes uma ferramenta matemática, as chamadas \textbf{Classes Laterais} (ou \textit{Coset’s}).
+
+
+
+\subsection{Espaços Vetoriais}
 \subsection{Códigos de Tratamento de Erros}
 \subsection{Binary Simetric Channel (BSC)}
 
@@ -78,7 +97,7 @@ No que diz respeito a grupos, ainda é possível destacar algumas propriedades. 
 \section{Conclusão}
 
 \appendix
-\section{Apêndice}
-\subsection{Código-fonte do simulador}
+\section{Testes de Subgrupo}
+\section{Código-fonte do simulador}
 
 \end{document}
