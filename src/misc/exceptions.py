@@ -7,4 +7,4 @@ class SizeError(Error):
     """Tamanho referente ao erro"""
 
     def __init__(self, param):
-        print("SizeError: Invalid "+param+"' size informed.")
+        print("SizeError: Invalid size ("+ param +")informed.")
