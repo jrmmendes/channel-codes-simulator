@@ -1,6 +1,6 @@
 import numpy as np
 import src.misc.exceptions as exception
-from abc import ABC, ABCMeta
+from abc import ABC
 
 
 class GenericImage(ABC):
@@ -78,6 +78,24 @@ class BinVecBasedImage(GenericImage):
         super().__init__(rows, cols)
         self.__binVector__ = np.zeros(24 * rows * cols, 'int8')
 
+    def getBitValue(self, bit):
+        if bit >= self.getLength():
+            raise exception.SizeError("bit position")
+
+        return self.__binVector__[bit]
+
+    def setBitValue(self, bit, value):
+        if bit >= self.getLength():
+            raise exception.SizeError("bit position")
+
+        if not (value == 1 or value == 0):
+            raise AttributeError("The informed value in setBitValue function is not a binary value")
+
+        self.__binVector__[bit] = bit
+
+    def getLength(self):
+        return self.getRows()*self.getCols()*24
+
 
 class ImageConverter(ABC):
     """Converte a representação da imagem"""
@@ -87,18 +105,41 @@ class ImageConverter(ABC):
         if not rgb_matrix.type(MatrixBasedImage):
             raise exception.ImageTypeError("is not a RGBMatrix")
 
+        bin_vec = []
+
         for i in range(rgb_matrix.getRows()):
             for j in range(rgb_matrix.getCols()):
-                pass
-
+                pixel = rgb_matrix.getColor(j, i)
+                bin_vec.append(dec2bin(pixel[0]))
+                bin_vec.append(dec2bin(pixel[1]))
+                bin_vec.append(dec2bin(pixel[2]))
 
     @staticmethod
     def BinVec2RGBMatrix(bin_vec):
         if not bin_vec.type(BinVecBasedImage):
             raise exception.ImageTypeError("is not a BinVec")
 
-def __bin2dec__(bin):
-    pass
 
-def __dec2bin__(dec):
-    pass
+def bin2dec(number):
+    """Função para converter valor binário em decimal"""
+    binary = str(number)
+    binary = binary[::-1]
+    n = len(binary)
+    decimal = 0
+    for i in range(n):
+        if binary[i] == "1":
+            decimal += 2**int(i)
+
+    return int(decimal)
+
+
+def dec2bin(number):
+    """Função para converter de decimal para binário"""
+    binary = ""
+    while True:
+        binary = binary + str(number % 2)
+        number = number // 2
+        if number == 0:
+            break
+    binary = binary[::-1]
+    return int(binary)
