@@ -23,7 +23,6 @@ class GenericImage(ABC):
         return self.__cols__
 
 
-
 class MatrixBasedImage(GenericImage):
     """Representação de imagens por matrizes RGB"""
 
@@ -46,6 +45,30 @@ class MatrixBasedImage(GenericImage):
     def getColor(self, x, y):
         if x <= 0 or x > self.getRows():
             raise exception.SizeError("x")
+        if y <= 0 or y > self.getRows():
+            raise exception.SizeError("y")
+
+        return self.getRedMatrix()[x, y], self.getGreenMatrix()[x, y], self.getBlueMatrix()[x, y]
+
+    def setColor(self, x, y, red, green, blue):
+        if x <= 0 or x > self.getRows():
+            raise exception.SizeError("x")
+
+        if y <= 0 or y > self.getRows():
+            raise exception.SizeError("y")
+
+        if red < 0 or red > 255:
+            raise exception.ColorError("red")
+
+        if green < 0 or green > 255:
+            raise exception.ColorError("green")
+
+        if blue < 0 or blue > 255:
+            raise exception.ColorError("blue")
+
+        self.getRedMatrix()[x, y] = red
+        self.getGreenMatrix()[x, y] = green
+        self.getBlueMatrix()[x, y] = blue
 
 
 class BinVecBasedImage(GenericImage):
@@ -53,4 +76,29 @@ class BinVecBasedImage(GenericImage):
 
     def __init__(self, rows, cols):
         super().__init__(rows, cols)
-        self.__binVector__ = np.zeros(24*rows*cols, 'int8')
+        self.__binVector__ = np.zeros(24 * rows * cols, 'int8')
+
+
+class ImageConverter(ABC):
+    """Converte a representação da imagem"""
+
+    @staticmethod
+    def RGBMatrix2BinVec(rgb_matrix):
+        if not rgb_matrix.type(MatrixBasedImage):
+            raise exception.ImageTypeError("is not a RGBMatrix")
+
+        for i in range(rgb_matrix.getRows()):
+            for j in range(rgb_matrix.getCols()):
+                pass
+
+
+    @staticmethod
+    def BinVec2RGBMatrix(bin_vec):
+        if not bin_vec.type(BinVecBasedImage):
+            raise exception.ImageTypeError("is not a BinVec")
+
+def __bin2dec__(bin):
+    pass
+
+def __dec2bin__(dec):
+    pass
