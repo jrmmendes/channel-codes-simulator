@@ -4,7 +4,7 @@ from abc import ABC, ABCMeta
 
 
 class GenericImage(ABC):
-    """Classe genérica que serve de base para as outras"""
+    """Classe genérica que serve de base para as outras e possui os métodos de tratamento"""
 
     def __init__(self, rows, cols):
         if rows <= 0:
@@ -21,6 +21,7 @@ class GenericImage(ABC):
 
     def getCols(self):
         return self.__cols__
+
 
 
 class MatrixBasedImage(GenericImage):
