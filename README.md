@@ -27,6 +27,7 @@ Com efeito, estas são:
 - MatrixBasedImage: representação de imagens usando matrizes
 - BinVecBasedImage: representação de imagens usando vetor binário
 - ImageConverter: conversor de representações.
+
 GenericImage
 ------------
 Classe que serve de base para as outras. Define os seguintes métodos (que são herdados pelas filhas):
