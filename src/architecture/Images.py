@@ -97,13 +97,14 @@ class BinVecBasedImage(GenericImage):
     def getLength(self):
         return self.getRows()*self.getCols()*24
 
+    def getBinVec(self):
+        return self.__binVector__
+
 
 class ImageConverter(ABC):
     """Converte a representação da imagem"""
 
     @staticmethod
-
-
     def RGBMatrix2BinVec(rgb_matrix):
 
         bin_vec = BinVecBasedImage(rgb_matrix.getRows(), rgb_matrix.getCols())
@@ -112,7 +113,7 @@ class ImageConverter(ABC):
 
         for i in range(rgb_matrix.getRows()):
             for j in range(rgb_matrix.getCols()):
-                pixel = rgb_matrix.getColor(j, i)
+                pixel = rgb_matrix.getColor(i, j)
 
                 red = str(dec2bin(pixel[0]))
                 green = str(dec2bin(pixel[1]))
@@ -137,8 +138,41 @@ class ImageConverter(ABC):
 
     @staticmethod
     def BinVec2RGBMatrix(bin_vec):
-        if not bin_vec.type(BinVecBasedImage):
-            raise exception.ImageTypeError("is not a BinVec")
+        rgb_image = MatrixBasedImage(bin_vec.getRows(), bin_vec.getCols())
+
+        binary_str = ""
+        aux = str(bin_vec.getBinVec())[1:-1].split(" ")
+
+        for i in range(len(aux)):
+            binary_str += aux[i]
+
+        n = 0
+
+        red = ""
+        green = ""
+        blue = ""
+
+        for i in range(bin_vec.getRows()):
+            for j in range(bin_vec.getCols()):
+                for k in range(8):
+                    red += binary_str[n]
+                    n += 1
+
+                for k in range(8):
+                    green += binary_str[n]
+                    n += 1
+
+                for k in range(8):
+                    blue += binary_str[n]
+                    n += 1
+
+                red = bin2dec(int(red))
+                green = bin2dec(int(green))
+                blue = bin2dec(int(blue))
+
+                rgb_image.setColor(i, j, red, green, blue)
+
+        return rgb_image
 
 
 def bin2dec(number):
