@@ -1,4 +1,5 @@
 import random as rd
+
 from src.architecture.Images import BinVecBasedImage
 
 
@@ -31,7 +32,7 @@ def noise(p, size):
     """Função que gera um ruido"""
     e = BinVecBasedImage(size)
 
-    for i in e.getLength():
+    for i in range(e.getLength()):
         e.setBitValue(i, bit(p))
 
     return e
@@ -39,11 +40,18 @@ def noise(p, size):
 
 def bit(p):
     """Função para obter um bit com probabilidade 1E-10 < p <= 1"""
-    if p < 1E-10 or p > 1:
+    if p < 1E-5 or p > 1:
         raise OverflowError("The value of p is out of bounds")
 
-    if p*1E10 < rd.randrange(1E10):
+    if rd.randrange(1E10) <= p * 1E10:
         return 1
     else:
         return 0
 
+
+def apply_noise(img, e):
+    length = img.getLength()
+
+    for i in range(length):
+        b = img.getBitValue(i) ^ e.getBitValue(i)
+        img.setBitValue(i, b)

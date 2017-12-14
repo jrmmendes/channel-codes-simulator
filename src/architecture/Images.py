@@ -1,5 +1,6 @@
-import numpy as np
 from abc import ABC
+
+import numpy as np
 
 
 class GenericImage(ABC):
@@ -47,6 +48,7 @@ class MatrixBasedImage(GenericImage):
 class BinVecBasedImage(GenericImage):
     def __init__(self, size):
         super().__init__(0, 0)
+        self.__length__ = size
         self.__binVector__ = np.zeros(size, 'int8')
 
     def getBitValue(self, bit):
@@ -56,7 +58,7 @@ class BinVecBasedImage(GenericImage):
         self.__binVector__[bit] = value
 
     def getLength(self):
-        return self.getRows()*self.getCols()*24
+        return self.__length__
 
     def getBinVec(self):
         return self.__binVector__

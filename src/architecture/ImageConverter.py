@@ -1,5 +1,5 @@
-from src.architecture.Images import BinVecBasedImage, MatrixBasedImage
 import src.util.Function as Function
+from src.architecture.Images import BinVecBasedImage, MatrixBasedImage
 
 
 def RGBMatrix2BinVec(rgb_matrix):
@@ -14,8 +14,8 @@ def RGBMatrix2BinVec(rgb_matrix):
 
     n = 0
 
-    for i in range(rgb_matrix.getRows()):
-        for j in range(rgb_matrix.getCols()):
+    for i in range(rows):
+        for j in range(cols):
             pixel = rgb_matrix.getColor(i, j)
 
             red = str(Function.dec2bin(pixel[0]))
@@ -45,21 +45,19 @@ def BinVec2RGBMatrix(bin_vec):
     rgb_image = MatrixBasedImage(bin_vec.getRows(), bin_vec.getCols())
 
     binary_str = ""
-    aux = str(bin_vec.getBinVec())[1:-1].split(" ")
+    aux = bin_vec.getBinVec()
 
     for i in range(len(aux)):
-        binary_str += aux[i]
+        binary_str += str(int(aux[i]))
 
     n = 0
-
-    red = ""
-    green = ""
-    blue = ""
-
     for i in range(bin_vec.getRows()):
         for j in range(bin_vec.getCols()):
+            red = ""
+            green = ""
+            blue = ""
             for k in range(8):
-                red += binary_str[n]
+                red += str(binary_str[n])
                 n += 1
 
             for k in range(8):
@@ -73,7 +71,6 @@ def BinVec2RGBMatrix(bin_vec):
             red = Function.bin2dec(int(red))
             green = Function.bin2dec(int(green))
             blue = Function.bin2dec(int(blue))
-
             rgb_image.setColor(i, j, red, green, blue)
 
     return rgb_image
