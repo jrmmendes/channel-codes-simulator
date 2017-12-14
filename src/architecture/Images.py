@@ -45,9 +45,9 @@ class MatrixBasedImage(GenericImage):
 
 
 class BinVecBasedImage(GenericImage):
-    def __init__(self, rows, cols):
-        super().__init__(rows, cols)
-        self.__binVector__ = np.zeros(24 * rows * cols, 'int8')
+    def __init__(self, size):
+        super().__init__(0, 0)
+        self.__binVector__ = np.zeros(size, 'int8')
 
     def getBitValue(self, bit):
         return self.__binVector__[bit]
@@ -60,3 +60,9 @@ class BinVecBasedImage(GenericImage):
 
     def getBinVec(self):
         return self.__binVector__
+
+    def setRows(self, rows):
+        self.__rows__ = rows
+
+    def setCols(self, cols):
+        self.__cols__ = cols

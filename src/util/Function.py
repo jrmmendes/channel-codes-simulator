@@ -1,3 +1,7 @@
+import random as rd
+from src.architecture.Images import BinVecBasedImage
+
+
 def bin2dec(binary_str):
     """Função para converter valor binário em decimal"""
     binary_str = str(binary_str)
@@ -23,6 +27,23 @@ def dec2bin(decimal):
     return int(binary_str)
 
 
-def noise(bit_probability):
+def noise(p, size):
     """Função que gera um ruido"""
-    pass
+    e = BinVecBasedImage(size)
+
+    for i in e.getLength():
+        e.setBitValue(i, bit(p))
+
+    return e
+
+
+def bit(p):
+    """Função para obter um bit com probabilidade 1E-10 < p <= 1"""
+    if p < 1E-10 or p > 1:
+        raise OverflowError("The value of p is out of bounds")
+
+    if p*1E10 < rd.randrange(1E10):
+        return 1
+    else:
+        return 0
+

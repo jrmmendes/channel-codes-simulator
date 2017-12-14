@@ -3,7 +3,14 @@ import src.util.Function as Function
 
 
 def RGBMatrix2BinVec(rgb_matrix):
-    bin_vec = BinVecBasedImage(rgb_matrix.getRows(), rgb_matrix.getCols())
+    """Converte uma imagem RGB para um vetor binário"""
+
+    rows = rgb_matrix.getRows()
+    cols = rgb_matrix.getCols()
+
+    bin_vec = BinVecBasedImage(24*rows*cols)
+    bin_vec.setRows(rows)
+    bin_vec.setCols(cols)
 
     n = 0
 
@@ -34,6 +41,7 @@ def RGBMatrix2BinVec(rgb_matrix):
 
 
 def BinVec2RGBMatrix(bin_vec):
+    """Converte vetor um vetor binário para uma imagem RGB"""
     rgb_image = MatrixBasedImage(bin_vec.getRows(), bin_vec.getCols())
 
     binary_str = ""
