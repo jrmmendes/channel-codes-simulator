@@ -31,6 +31,7 @@ def dec2bin(decimal):
 def noise(p, size):
     """Função que gera um ruido"""
     e = BinVecBasedImage(size)
+    """Junior é de carnaiba"""
 
     for i in range(e.getLength()):
         e.setBitValue(i, bit(p))
